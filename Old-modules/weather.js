@@ -6,7 +6,7 @@ async function getWeather(request, response){
  
   let searchQueryCity = request.query.searchQueryCity;
 
-  let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${searchQueryCity}&key=${process.env.WEATHER_API_KEY}&days=3&lat&lon`;
+  let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${searchQueryCity}&key=${process.env.WEATHER_API_KEY}`;
   
   let weatherObject = await axios.get(url);
   

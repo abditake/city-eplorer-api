@@ -8,7 +8,7 @@ module.exports = getWeather;
 
 async function getWeather(city) {
   const key = 'weather-' + city;
-  const url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=${process.env.WEATHER_API_KEY}&days=3&lat=23&lon=155`;
+  const url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=${process.env.WEATHER_API_KEY}`;
   
   console.log('URL HERE',url);
   if (cache[key] && (Date.now() - cache[key].timestamp < 50000)) {
